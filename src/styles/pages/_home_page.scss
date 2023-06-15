@@ -1,0 +1,70 @@
+.home_page {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+
+  .center_homepage {
+    width: 100%;
+    margin: 20px;
+
+    .container {
+      background: var(--background);
+      width: 65%;
+      padding: 20px;
+      margin: 25px;
+      display: grid;
+
+      .row {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        padding: 15px;
+        text-align: center;
+        gap: 8px;
+        padding: 10px;
+        .hour {
+          font-size: 18px;
+          font-weight: bold;
+        }
+        .day {
+          font-weight: bold;
+        }
+        .matiere {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid #000;
+          .salle {
+            color: var(--danger);
+          }
+        }
+      }
+
+      .day {
+        h2 {
+          text-align: center;
+          font-size: 45px;
+        }
+
+        .table {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          text-align: center;
+          font-size: 21px;
+
+          & > .heure,
+          & > .matiere {
+            padding: 10px;
+          }
+
+          & > .nothing {
+            grid-column: span 2;
+            border: 1px solid var(--border);
+            padding: 20px 0px;
+            margin: 10px;
+          }
+        }
+      }
+    }
+  }
+}
