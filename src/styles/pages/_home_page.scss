@@ -7,11 +7,24 @@
     width: 100%;
     margin: 20px;
 
+    .intiule_filiere {
+      text-align: center;
+      font-size: 50px;
+      padding: 18px;
+    }
+
+    .intiule_week {
+      text-align: center;
+      padding: 15px;
+    }
+
     .container {
       background: var(--background);
-      width: 65%;
+      width: 95%;
       padding: 20px;
-      margin: 25px;
+      margin: auto;
+      padding-top: 0;
+      margin-top: 0;
       display: grid;
 
       .row {
@@ -65,6 +78,15 @@
           }
         }
       }
+    }
+
+    .footer_nb {
+      position: fixed;
+      bottom: 0;
+      /* left: 0; */
+      border-radius: 0px;
+      font-size: 11px;
+      padding: 11px 0px;
     }
   }
 }

@@ -8,6 +8,11 @@ const Home = () => {
       <SideMenu />
       <div className="center_homepage">
         <TopBar />
+        <div className="intiule_filiere">FILIERE : GENIE LOGICIEL</div>
+        <div className="intiule_week">
+          Semaine:{" "}
+          <span style={{ color: "var(--danger)" }}>Du 10 au 17 mai 2021</span>
+        </div>
         <div className="container">
           <div className="row">
             <div className="hour">Heure</div>
@@ -137,6 +142,12 @@ const Home = () => {
               <span className="salle">C - 201</span>
             </div>
           </div>
+        </div>
+
+        <div className="footer_nb">
+          NB: Les étudiants sont invités à consulter régulièrement le tableau
+          d'affichage car des modifications pourront etre apportées aux emplois
+          de temps.
         </div>
       </div>
     </div>
