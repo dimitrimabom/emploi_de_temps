@@ -18,7 +18,9 @@ const Home = () => {
           >
             <i className="fa fa-print"></i>
           </button>
-          <div className="intiule_filiere">FILIERE : GENIE LOGICIEL</div>
+          <div className="intiule_filiere">
+            FILIERE : <span>GENIE LOGICIEL</span>
+          </div>
           <div className="intiule_week">
             Semaine:{" "}
             <span style={{ color: "var(--danger)" }}>Du 10 au 17 mai 2021</span>

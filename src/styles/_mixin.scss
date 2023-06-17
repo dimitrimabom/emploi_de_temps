@@ -21,3 +21,13 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+@mixin textgradient(
+  $color1: var(--primary),
+  $color2: var(--blue),
+  $deg: 223deg
+) {
+  background: linear-gradient($deg, $color1, $color2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
