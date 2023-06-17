@@ -4,7 +4,7 @@
   flex-direction: row;
 
   .center_homepage {
-    width: calc(100% - 250px);
+    width: 100%;
     margin: 20px;
 
     .intiule_filiere {
@@ -21,57 +21,101 @@
     .container {
       background: var(--background);
       width: 95%;
-      padding: 20px;
       margin: auto;
-      padding-top: 0;
-      margin-top: 0;
 
-      .row {
-        background: var(--background);
-        width: 85%;
-        padding: 20px;
-        margin: auto;
-        padding-top: 0;
-        margin-top: 0;
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(7, 1fr);
-        gap: 10px;
-        justify-content: center;
-        align-content: center;
-
-        .hour {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 18px;
-          font-weight: bold;
-          width: 100px;
+      table {
+        border-collapse: collapse;
+        margin: 20px;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        thead {
+          background-color: var(--primary);
+          th {
+            padding: 10px;
+            text-align: center;
+            border-radius: 0px;
+            color: var(--accent);
+            border: 1px solid var(--border);
+          }
         }
-        .day {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-weight: bold;
-        }
-        .matiere {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          border: 1px solid var(--border);
-          padding: 0px 10px;
-          text-align: center;
-          .salle {
-            color: var(--danger);
+        tbody {
+          tr {
+            &:nth-child(even) {
+              background-color: var(--accent);
+            }
+            .day {
+              font-weight: bold;
+            }
+            td {
+              border-radius: 0px;
+              padding: 10px;
+              border: 1px solid var(--border);
+              text-align: center;
+              span {
+                display: block;
+                font-weight: bold;
+                &:nth-child(2) {
+                  font-size: 14px;
+                  color: var(--writing);
+                  opacity: 0.5;
+                }
+                &:nth-child(3) {
+                  font-size: 12px;
+                  color: var(--danger);
+                }
+              }
+            }
           }
         }
       }
 
-      .day {
-        h2 {
+      .content_days {
+        margin-bottom: 20px;
+        .title_day {
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 10px;
           text-align: center;
-          font-size: 45px;
+        }
+        .content_hour {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: var(--background);
+          border: 1px solid var(--border);
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px var(--shadow);
+          margin-bottom: 15px;
+          .hour {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+          .info_day {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 14px;
+            color: var(--writing);
+            span {
+              margin: 3px 0;
+              font-weight: bold;
+            }
+            span:first-child {
+              font-size: 16px;
+            }
+            span:nth-child(2) {
+              font-size: 14px;
+              color: var(--writing);
+              opacity: 0.5;
+            }
+            span:last-child {
+              font-size: 12px;
+              color: var(--danger);
+            }
+          }
         }
       }
     }
@@ -83,4 +127,11 @@
       padding: 11px 0px;
     }
   }
+}
+
+.print {
+  position: fixed;
+  right: 15px;
+
+  @extend %button;
 }
