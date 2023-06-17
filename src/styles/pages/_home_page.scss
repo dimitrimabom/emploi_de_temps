@@ -4,7 +4,7 @@
   flex-direction: row;
 
   .center_homepage {
-    width: 100%;
+    width: calc(100% - 250px);
     margin: 20px;
 
     .intiule_filiere {
@@ -25,20 +25,33 @@
       margin: auto;
       padding-top: 0;
       margin-top: 0;
-      display: grid;
 
       .row {
+        background: var(--background);
+        width: 85%;
+        padding: 20px;
+        margin: auto;
+        padding-top: 0;
+        margin-top: 0;
         display: grid;
         grid-template-columns: repeat(8, 1fr);
-        padding: 15px;
-        text-align: center;
-        gap: 8px;
-        padding: 10px;
+        grid-template-rows: repeat(7, 1fr);
+        gap: 10px;
+        justify-content: center;
+        align-content: center;
+
         .hour {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           font-size: 18px;
           font-weight: bold;
+          width: 100px;
         }
         .day {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           font-weight: bold;
         }
         .matiere {
@@ -46,7 +59,9 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          border: 1px solid #000;
+          border: 1px solid var(--border);
+          padding: 0px 10px;
+          text-align: center;
           .salle {
             color: var(--danger);
           }
@@ -58,32 +73,11 @@
           text-align: center;
           font-size: 45px;
         }
-
-        .table {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          text-align: center;
-          font-size: 21px;
-
-          & > .heure,
-          & > .matiere {
-            padding: 10px;
-          }
-
-          & > .nothing {
-            grid-column: span 2;
-            border: 1px solid var(--border);
-            padding: 20px 0px;
-            margin: 10px;
-          }
-        }
       }
     }
 
     .footer_nb {
-      position: fixed;
-      bottom: 0;
-      /* left: 0; */
+      text-align: center;
       border-radius: 0px;
       font-size: 11px;
       padding: 11px 0px;
