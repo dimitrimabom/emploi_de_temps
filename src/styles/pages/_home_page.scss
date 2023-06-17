@@ -132,6 +132,7 @@
 .print {
   position: fixed;
   right: 15px;
+  bottom: 20px;
 
   @extend %button;
 }
