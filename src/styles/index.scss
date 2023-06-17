@@ -8,6 +8,7 @@
 @import "./components/side_menu";
 @import "./components/top_bar";
 
-.ishide {
-  display: none;
+.background_image {
+  background-attachment: fixed;
+  background-size: cover;
 }
