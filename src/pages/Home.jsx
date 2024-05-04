@@ -14,7 +14,7 @@ const Home = () => {
           <i className="fa fa-print"></i>
         </button>
         <div className="intiule_filiere">
-          FILIERE : <span>GENIE LOGICIEL</span>
+          FILIERE : <span>Hello World</span>
         </div>
         <div className="intiule_week">
           Semaine:{" "}
